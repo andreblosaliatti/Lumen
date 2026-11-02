@@ -29,8 +29,9 @@ export default function ExperienceCard({
           className="experience-image"
           src={experience.image}
           alt={experience.imageAlt ?? ""}
-          width="1672"
-          height="941"
+          width={experience.imageVariant === "logo" ? 1115 : 1672}
+          height={experience.imageVariant === "logo" ? 722 : 941}
+          data-variant={experience.imageVariant}
           loading="lazy"
         />
       )}

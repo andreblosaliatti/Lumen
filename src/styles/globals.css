@@ -324,6 +324,14 @@ a:focus-visible {
   object-fit: cover;
 }
 
+.experience-image[data-variant="logo"] {
+  width: min(100%, 220px);
+  height: 142px;
+  aspect-ratio: auto;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
 .experience-video {
   display: block;
   width: 220px;

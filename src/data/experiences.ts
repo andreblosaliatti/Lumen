@@ -4,6 +4,7 @@ import gastronomyIcon from "../../assets/icone-gastronomia.svg";
 import babyIcon from "../../assets/icone-baby.svg";
 import babyVideo from "../../assets/WhatsApp Video 2026-11-02 at 13.14.48.mp4";
 import babyVideoPoster from "../../assets/circulo-de-luz-video-poster.jpg";
+import nominalLogo from "../../assets/logo-lumen-principal.webp";
 import soundArtwork from "../../assets/dna-sonoro.webp";
 import gastronomyArtwork from "../../assets/dna-gastronomico.webp";
 
@@ -16,6 +17,7 @@ export type Experience = {
   accent: string;
   image?: string;
   imageAlt?: string;
+  imageVariant?: "logo";
   video?: string;
   videoPoster?: string;
 };
@@ -29,6 +31,9 @@ export const experiences: Experience[] = [
       "Uma leitura artística da identidade, criada a partir da história e da energia de cada nome.",
     icon: nominalIcon,
     accent: "nominal",
+    image: nominalLogo,
+    imageAlt: "Logotipo LUMEN",
+    imageVariant: "logo",
   },
   {
     number: "02",
