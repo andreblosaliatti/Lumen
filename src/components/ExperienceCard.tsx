@@ -29,7 +29,8 @@ export default function ExperienceCard({
           className="experience-video"
           controls
           playsInline
-          preload="metadata"
+          preload="none"
+          poster={experience.videoPoster}
         >
           <source src={experience.video} type="video/mp4" />
           Seu navegador não oferece suporte à reprodução de vídeo.

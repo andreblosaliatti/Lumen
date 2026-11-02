@@ -3,6 +3,7 @@ import nominalIcon from "../../assets/icone-dna.svg";
 import gastronomyIcon from "../../assets/icone-gastronomia.svg";
 import babyIcon from "../../assets/icone-baby.svg";
 import babyVideo from "../../assets/WhatsApp Video 2026-11-02 at 13.14.48.mp4";
+import babyVideoPoster from "../../assets/circulo-de-luz-video-poster.jpg";
 
 export type Experience = {
   number: string;
@@ -12,6 +13,7 @@ export type Experience = {
   icon: string;
   accent: string;
   video?: string;
+  videoPoster?: string;
 };
 
 export const experiences: Experience[] = [
@@ -50,5 +52,6 @@ export const experiences: Experience[] = [
     icon: babyIcon,
     accent: "baby",
     video: babyVideo,
+    videoPoster: babyVideoPoster,
   },
 ];

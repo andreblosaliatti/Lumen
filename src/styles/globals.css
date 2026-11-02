@@ -307,9 +307,10 @@ a:focus-visible {
 
 .experience-video {
   display: block;
-  width: auto;
+  width: 220px;
   max-width: 100%;
-  height: min(280px, 70vw);
+  height: auto;
+  aspect-ratio: 482 / 848;
   margin: 0 auto 1.1rem;
   border: 1px solid rgba(232, 200, 142, 0.2);
   border-radius: 10px;
