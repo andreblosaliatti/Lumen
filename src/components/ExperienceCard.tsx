@@ -24,6 +24,16 @@ export default function ExperienceCard({
       <p className="experience-name">{experience.name}</p>
       <h3>{experience.title}</h3>
       <p className="experience-description">{experience.description}</p>
+      {experience.image && (
+        <img
+          className="experience-image"
+          src={experience.image}
+          alt={experience.imageAlt ?? ""}
+          width="1672"
+          height="941"
+          loading="lazy"
+        />
+      )}
       {experience.video && (
         <video
           className="experience-video"

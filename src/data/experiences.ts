@@ -4,6 +4,9 @@ import gastronomyIcon from "../../assets/icone-gastronomia.svg";
 import babyIcon from "../../assets/icone-baby.svg";
 import babyVideo from "../../assets/WhatsApp Video 2026-11-02 at 13.14.48.mp4";
 import babyVideoPoster from "../../assets/circulo-de-luz-video-poster.jpg";
+import nominalArtwork from "../../assets/dna-nominal.webp";
+import soundArtwork from "../../assets/dna-sonoro.webp";
+import gastronomyArtwork from "../../assets/dna-gastronomico.webp";
 
 export type Experience = {
   number: string;
@@ -12,6 +15,8 @@ export type Experience = {
   description: string;
   icon: string;
   accent: string;
+  image?: string;
+  imageAlt?: string;
   video?: string;
   videoPoster?: string;
 };
@@ -25,6 +30,8 @@ export const experiences: Experience[] = [
       "Uma leitura artística da identidade, criada a partir da história e da energia de cada nome.",
     icon: nominalIcon,
     accent: "nominal",
+    image: nominalArtwork,
+    imageAlt: "Mulher lendo um livro com uma hélice de DNA dourada e letras ao redor",
   },
   {
     number: "02",
@@ -34,6 +41,8 @@ export const experiences: Experience[] = [
       "Uma criação musical feita para traduzir a essência de um nome em som e emoção.",
     icon: soundIcon,
     accent: "sound",
+    image: soundArtwork,
+    imageAlt: "Criança envolta em luzes e uma hélice de DNA colorida",
   },
   {
     number: "03",
@@ -42,6 +51,8 @@ export const experiences: Experience[] = [
     description: "Experiência sensorial através de seu nome e características.",
     icon: gastronomyIcon,
     accent: "gastronomy",
+    image: gastronomyArtwork,
+    imageAlt: "Chef criando um prato com uma hélice de DNA feita de ingredientes",
   },
   {
     number: "04",
