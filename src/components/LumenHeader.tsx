@@ -16,6 +16,7 @@ export default function LumenHeader() {
           height="722"
         />
       </a>
+      <span className="brand-edition">DNA NOMINAL</span>
     </header>
   );
 }
