@@ -24,6 +24,17 @@ export default function ExperienceCard({
       <p className="experience-name">{experience.name}</p>
       <h3>{experience.title}</h3>
       <p className="experience-description">{experience.description}</p>
+      {experience.video && (
+        <video
+          className="experience-video"
+          controls
+          playsInline
+          preload="metadata"
+        >
+          <source src={experience.video} type="video/mp4" />
+          Seu navegador não oferece suporte à reprodução de vídeo.
+        </video>
+      )}
       <a className="card-link" href="#contato">
         <span>Conheça a experiência</span>
         <ArrowUpRight size={16} strokeWidth={1.6} aria-hidden="true" />

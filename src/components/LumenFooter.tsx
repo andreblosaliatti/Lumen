@@ -12,6 +12,9 @@ export default function LumenFooter() {
         className="footer-logo"
       />
       <p>Seu Nome, Uma Criação.</p>
+      <a className="footer-email" href="mailto:contato@lumendnanominal.com.br">
+        contato@lumendnanominal.com.br
+      </a>
       <span>© {new Date().getFullYear()} LUMEN — DNA Nominal</span>
     </footer>
   );

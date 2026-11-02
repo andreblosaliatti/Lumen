@@ -305,6 +305,18 @@ a:focus-visible {
   line-height: 1.65;
 }
 
+.experience-video {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: min(280px, 70vw);
+  margin: 0 auto 1.1rem;
+  border: 1px solid rgba(232, 200, 142, 0.2);
+  border-radius: 10px;
+  background: #080808;
+  object-fit: contain;
+}
+
 .card-link {
   position: relative;
   z-index: 1;
@@ -405,6 +417,18 @@ a:focus-visible {
   font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
   font-size: 0.83rem;
   font-style: italic;
+}
+
+.footer-email {
+  margin-top: 0.55rem;
+  color: var(--color-text-secondary);
+  font-size: 0.72rem;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.footer-email:hover {
+  color: var(--color-gold-light);
 }
 
 .footer span {

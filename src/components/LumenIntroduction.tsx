@@ -9,7 +9,7 @@ export default function LumenIntroduction() {
       </h1>
       <p className="intro-copy">
         Nomes carregam histórias. A LUMEN transforma cada uma delas em uma
-        experiência única para ouvir, sentir e guardar.
+        experiência: sonora, visual e sensorial.
       </p>
     </section>
   );
