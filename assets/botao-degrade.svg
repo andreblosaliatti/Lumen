@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 180" role="img" aria-label="botao degrade"><defs>
+<linearGradient id="aurora" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00B9F2"/><stop offset=".25" stop-color="#00D9CE"/><stop offset=".48" stop-color="#E5E42E"/><stop offset=".68" stop-color="#F5A028"/><stop offset=".86" stop-color="#F03E36"/><stop offset="1" stop-color="#B82BBA"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2=".7" y2="1"><stop stop-color="#B67C38"/><stop offset=".27" stop-color="#FFF4D5"/><stop offset=".55" stop-color="#E7BF7C"/><stop offset=".85" stop-color="#B9792F"/><stop offset="1" stop-color="#FFE8AF"/></linearGradient>
+<linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00ADFF"/><stop offset=".19" stop-color="#03D7BE"/><stop offset=".4" stop-color="#F1E539"/><stop offset=".62" stop-color="#FF9B16"/><stop offset=".82" stop-color="#FF393E"/><stop offset="1" stop-color="#DE1DA3"/></linearGradient>
+<filter id="glow" x="-40%" y="-60%" width="180%" height="220%"><feGaussianBlur stdDeviation="4"/></filter>
+</defs><rect x="3" y="3" width="994" height="174" rx="87" stroke="url(#spectrum)" stroke-width="5" fill="#17120D"/><rect x="15" y="15" width="970" height="150" rx="75" fill="url(#gold)" opacity=".10"/></svg>

@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/DecorativeWave.tsx","./src/components/ExperienceCard.tsx","./src/components/ExperienceList.tsx","./src/components/LumenCTA.tsx","./src/components/LumenFooter.tsx","./src/components/LumenHeader.tsx","./src/components/LumenIntroduction.tsx","./src/data/experiences.ts"],"version":"5.6.3"}

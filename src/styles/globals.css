@@ -1,0 +1,502 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #050505;
+  --color-surface: #0d0d0d;
+  --color-surface-elevated: #151515;
+  --color-gold: #e8c88e;
+  --color-gold-light: #f7e5bd;
+  --color-gold-dark: #b78b49;
+  --color-text: #f5efe4;
+  --color-text-secondary: #c8bca9;
+  --color-cyan: #00d7ed;
+  --color-blue: #006bea;
+  --color-green: #23d19a;
+  --color-yellow: #ffe650;
+  --color-orange: #ff9d24;
+  --color-red: #fa344b;
+  --color-violet: #ab58e9;
+  --color-border: rgba(232, 200, 142, 0.3);
+  --gradient-spectrum: linear-gradient(
+    90deg,
+    #00d7ed 0%,
+    #006bea 18%,
+    #23d19a 36%,
+    #ffe650 55%,
+    #ff9d24 73%,
+    #fa344b 88%,
+    #ab58e9 100%
+  );
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% 13%, rgba(111, 82, 43, 0.12), transparent 36rem),
+    var(--color-background);
+}
+
+body::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-image: url("../../assets/fundo-aurora.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: min(100% auto, 1100px);
+  content: "";
+  opacity: 0.17;
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 5px;
+}
+
+.page-shell {
+  position: relative;
+  width: min(100% - 40px, 840px);
+  margin-inline: auto;
+}
+
+.ambient-glow {
+  position: absolute;
+  z-index: -1;
+  top: 10rem;
+  left: 50%;
+  width: min(90vw, 820px);
+  height: 28rem;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(163, 115, 49, 0.09), transparent 68%);
+  filter: blur(26px);
+  pointer-events: none;
+}
+
+.logo-link {
+  display: block;
+  width: min(74vw, 370px);
+}
+
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 24px rgba(231, 191, 124, 0.13));
+}
+
+.brand-edition {
+  margin-top: -1.6rem;
+  color: var(--color-gold);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+}
+
+.intro-section {
+  max-width: 620px;
+  margin: 3.9rem auto 0;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-gold);
+  font-size: 0.63rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  line-height: 1.8;
+}
+
+.intro-section h1,
+.cta-section h2 {
+  margin: 1rem 0 0;
+  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-size: clamp(2.85rem, 8vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.intro-section h1 span,
+.cta-section h2 span {
+  color: var(--color-gold);
+  font-style: italic;
+}
+
+.intro-copy {
+  max-width: 480px;
+  margin: 1.4rem auto 0;
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.wave-wrap {
+  position: relative;
+  width: calc(100% + 80px);
+  height: 102px;
+  margin: 0 -40px 0;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.wave-wrap img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  min-width: 740px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+}
+
+.experiences-section {
+  padding-top: 0.4rem;
+  scroll-margin-top: 2rem;
+}
+
+.section-heading {
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 0.55rem 0 0;
+  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-size: clamp(1.7rem, 4vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.experience-card {
+  position: relative;
+  display: flex;
+  min-height: 255px;
+  flex-direction: column;
+  padding: 1.25rem 1.35rem 1.15rem;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 17px;
+  background:
+    linear-gradient(155deg, rgba(19, 18, 16, 0.98), rgba(8, 8, 8, 0.98)) padding-box,
+    linear-gradient(135deg, rgba(232, 200, 142, 0.68), rgba(232, 200, 142, 0.1) 46%, rgba(232, 200, 142, 0.32)) border-box;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.experience-card::after {
+  position: absolute;
+  right: -60px;
+  bottom: -96px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: var(--card-glow, rgba(232, 200, 142, 0.08));
+  filter: blur(48px);
+  content: "";
+  pointer-events: none;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 44px rgba(0, 0, 0, 0.34), 0 0 28px var(--card-glow, rgba(232, 200, 142, 0.07));
+}
+
+.experience-card--sound {
+  --card-glow: rgba(0, 190, 225, 0.14);
+}
+
+.experience-card--nominal {
+  --card-glow: rgba(224, 185, 113, 0.13);
+}
+
+.experience-card--gastronomy {
+  --card-glow: rgba(243, 145, 43, 0.12);
+}
+
+.experience-card--baby {
+  --card-glow: rgba(177, 86, 217, 0.12);
+}
+
+.card-topline {
+  display: flex;
+  min-height: 52px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.card-number {
+  color: rgba(232, 200, 142, 0.66);
+  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.experience-icon {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(232, 200, 142, 0.12));
+}
+
+.experience-name {
+  margin: 0.55rem 0 0;
+  color: var(--color-gold);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.experience-card h3 {
+  max-width: 300px;
+  margin: 0.55rem 0 0;
+  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-size: clamp(1.15rem, 2.6vw, 1.45rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.16;
+}
+
+.experience-description {
+  max-width: 330px;
+  margin: 0.55rem 0 1.1rem;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+.card-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  color: var(--color-gold-light);
+  font-size: 0.73rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: gap 180ms ease, color 180ms ease;
+}
+
+.card-link:hover {
+  gap: 0.7rem;
+  color: #fff;
+}
+
+.cta-section {
+  position: relative;
+  margin: 5rem 0 3.5rem;
+  padding: 2.6rem 1.5rem 2.8rem;
+  border-block: 1px solid rgba(232, 200, 142, 0.15);
+  scroll-margin-top: 2rem;
+}
+
+.cta-section::before {
+  position: absolute;
+  inset: -1px 15%;
+  background: radial-gradient(ellipse, rgba(232, 200, 142, 0.055), transparent 68%);
+  content: "";
+  pointer-events: none;
+}
+
+.cta-star {
+  display: block;
+  margin-bottom: 0.9rem;
+  color: var(--color-gold);
+  font-size: 1.2rem;
+}
+
+.cta-section h2 {
+  margin-top: 0.85rem;
+  font-size: clamp(2.1rem, 6vw, 3.45rem);
+  line-height: 1.05;
+}
+
+.cta-button {
+  position: relative;
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 1.55rem;
+  padding: 0.7rem 1.15rem;
+  border: 1px solid rgba(232, 200, 142, 0.68);
+  border-radius: 999px;
+  background:
+    linear-gradient(105deg, rgba(183, 139, 73, 0.14), rgba(21, 21, 21, 0.7)),
+    var(--color-surface);
+  color: var(--color-gold-light);
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-gold-light);
+  background-color: var(--color-surface-elevated);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 2.5rem;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 76px;
+  height: 52px;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.77;
+}
+
+.footer p {
+  margin: 0.2rem 0 0;
+  color: var(--color-gold);
+  font-family: "Iowan Old Style", "Baskerville", "Times New Roman", serif;
+  font-size: 0.83rem;
+  font-style: italic;
+}
+
+.footer span {
+  margin-top: 0.85rem;
+  color: rgba(200, 188, 169, 0.62);
+  font-size: 0.63rem;
+  letter-spacing: 0.06em;
+}
+
+@media (min-width: 900px) {
+  .page-shell {
+    padding-top: 0.25rem;
+  }
+
+  .intro-section {
+    margin-top: 3.2rem;
+  }
+
+  .experience-card {
+    min-height: 270px;
+    padding: 1.4rem 1.55rem 1.3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-shell {
+    width: min(100% - 32px, 440px);
+  }
+
+  .logo-link {
+    width: min(78vw, 320px);
+  }
+
+  .brand-edition {
+    margin-top: -1.35rem;
+    font-size: 0.52rem;
+  }
+
+  .intro-section {
+    margin-top: 3.5rem;
+  }
+
+  .intro-copy {
+    max-width: 350px;
+    font-size: 0.88rem;
+  }
+
+  .wave-wrap {
+    width: calc(100% + 32px);
+    height: 82px;
+    margin-inline: -16px;
+  }
+
+  .experiences-section {
+    padding-top: 0.2rem;
+  }
+
+  .section-heading {
+    margin-bottom: 1.25rem;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .experience-card {
+    min-height: 223px;
+    padding: 1.1rem 1.2rem 1.05rem;
+  }
+
+  .experience-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .experience-description {
+    max-width: 360px;
+  }
+
+  .cta-section {
+    margin: 3.8rem 0 2.6rem;
+    padding-inline: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
