@@ -4,7 +4,6 @@ import gastronomyIcon from "../../assets/icone-gastronomia.svg";
 import babyIcon from "../../assets/icone-baby.svg";
 import babyVideo from "../../assets/WhatsApp Video 2026-11-02 at 13.14.48.mp4";
 import babyVideoPoster from "../../assets/circulo-de-luz-video-poster.jpg";
-import nominalArtwork from "../../assets/dna-nominal.webp";
 import soundArtwork from "../../assets/dna-sonoro.webp";
 import gastronomyArtwork from "../../assets/dna-gastronomico.webp";
 
@@ -30,8 +29,6 @@ export const experiences: Experience[] = [
       "Uma leitura artística da identidade, criada a partir da história e da energia de cada nome.",
     icon: nominalIcon,
     accent: "nominal",
-    image: nominalArtwork,
-    imageAlt: "Mulher lendo um livro com uma hélice de DNA dourada e letras ao redor",
   },
   {
     number: "02",

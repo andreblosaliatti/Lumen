@@ -258,7 +258,7 @@ a:focus-visible {
 
 .card-topline {
   display: flex;
-  min-height: 52px;
+  min-height: 64px;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -271,10 +271,18 @@ a:focus-visible {
 }
 
 .experience-icon {
-  width: 46px;
-  height: 46px;
+  width: 58px;
+  height: 58px;
   object-fit: contain;
-  filter: drop-shadow(0 0 12px rgba(232, 200, 142, 0.12));
+  filter: drop-shadow(0 0 12px rgba(232, 200, 142, 0.2));
+}
+
+.experience-card--sound .experience-icon {
+  width: 64px;
+  height: 64px;
+  filter:
+    drop-shadow(0 0 5px rgba(0, 215, 237, 0.65))
+    drop-shadow(0 0 14px rgba(0, 215, 237, 0.25));
 }
 
 .experience-name {
