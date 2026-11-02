@@ -29,18 +29,21 @@ export default function ExperienceCard({
           className="experience-image"
           src={experience.image}
           alt={experience.imageAlt ?? ""}
-          width={experience.imageVariant === "logo" ? 1115 : 1672}
-          height={experience.imageVariant === "logo" ? 722 : 941}
-          data-variant={experience.imageVariant}
+          width="1672"
+          height="941"
           loading="lazy"
         />
       )}
       {experience.video && (
         <video
-          className="experience-video"
-          controls
+          className={`experience-video${experience.videoPresentation ? ` experience-video--${experience.videoPresentation}` : ""}`}
+          aria-label={`Vídeo ${experience.name}`}
+          autoPlay={experience.videoPresentation === "ambient"}
+          controls={experience.videoPresentation !== "ambient"}
+          loop={experience.videoPresentation === "ambient"}
+          muted={experience.videoPresentation === "ambient"}
           playsInline
-          preload="none"
+          preload={experience.videoPresentation === "ambient" ? "auto" : "none"}
           poster={experience.videoPoster}
         >
           <source src={experience.video} type="video/mp4" />
