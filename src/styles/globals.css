@@ -113,7 +113,7 @@ a:focus-visible {
 }
 
 .brand-edition {
-  margin-top: 0.45rem;
+  margin-top: 2.4rem;
   color: var(--color-gold);
   font-size: 0.58rem;
   font-weight: 500;
@@ -464,7 +464,7 @@ a:focus-visible {
   }
 
   .brand-edition {
-    margin-top: 0.35rem;
+    margin-top: 2rem;
     font-size: 0.52rem;
   }
 
