@@ -1,0 +1,19 @@
+{
+  "name": "LUMEN — Seu Nome, Uma Criação",
+  "short_name": "LUMEN",
+  "description": "Experiências autorais em DNA Nominal, Sonoro, Gastronômico e Baby.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

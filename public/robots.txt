@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lumendnanominal.com.br/sitemap.xml
